@@ -1,15 +1,25 @@
 # People Archive
 
-Each person has a dedicated folder containing a profile and research plan. Add evidence beneath that person using:
+Each person now has a folder displayed under their real name rather than a lowercase technical slug.
 
-- `verification/vital-records/`
-- `verification/census/`
-- `verification/obituaries/`
-- `verification/cemetery/`
-- `verification/military/`
-- `verification/newspapers/`
-- `research-notes/`
-- `correspondence/`
-- `media/`
+Every person folder should eventually contain:
 
-Use redacted documents only and preserve living-person privacy.
+```text
+Full Name/
+├── README.md
+├── verification/
+│   ├── vital-records/
+│   ├── census/
+│   ├── obituaries/
+│   ├── cemetery/
+│   ├── military/
+│   ├── newspapers/
+│   └── other/
+├── research-notes/
+├── correspondence/
+└── media/
+```
+
+The current README cards contain all family and research information available so far. Details derived from obituaries or indirect research are labeled as strongly supported or probable rather than confirmed.
+
+Do not commit unredacted sensitive records or unnecessary information about living people and minors.
