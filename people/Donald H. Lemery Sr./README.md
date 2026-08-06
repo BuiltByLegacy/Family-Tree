@@ -1,26 +1,37 @@
 # Donald H. Lemery Sr.
 
-## Vital information
-- Born: 12 September 1924
-- Birthplace: Putnam, Connecticut
-- Died: 18 April 2011
+- **Status:** Deceased
+- **Evidence status:** High through obituary and descendant records
+- **Branches:** Lemery, Vanasse
 
-## Known relationships
-- Spouse: Gloria Taschereau
-- Children: Mark Anthony Lemery; Donald H. Lemery Jr.; Cheryl Lemery Bocwinski; Michele/Michelle Lemery
+## Vital events
+
+- Born: **September 12, 1924**
+- Birthplace: **Putnam, Connecticut**
+- Died: **April 18, 2011**, reported in prior research
+
+## Relationships
+
 - Father: Honora Lemery
 - Mother: Delia Vanasse Lemery
-- Siblings named in research: Robert L. Lemery; Lorraine Lemery Lemieux; Jeanette Lemery; additional unnamed siblings
+- Former wife: Gloria Taschereau Lemery
+- Children reported: Mark Anthony Lemery, Donald H. Lemery Jr., Cheryl Lemery Bocwinski, and Michele Lemery Young
+- Siblings: Lorraine Lemery Lemieux survived him; three other siblings reportedly predeceased him, with Robert and Jeanette identified in collateral research and at least one still unresolved
 
-## Occupation
-Truck driver.
+## Evidence summary
 
-## Evidence status
-Confirmed as Mark Anthony Lemery's father by Mark's death certificate. Remaining details are strongly supported by obituary research.
+Donald's obituary is the strongest current derivative source for his exact birth details, parents, former wife, and sibling network. His original Putnam birth certificate is the next decisive record because it may provide Honora and Delia's exact recorded names, ages, birthplaces, residence, and occupations.
 
-## Priority documents
-- Birth certificate
-- Marriage certificate to Gloria Taschereau
-- Obituary
-- Census records
-- Parents' marriage record
+## Research tasks
+
+- Order the September 12, 1924 Putnam birth certificate
+- Locate baptism at St. Mary Church of the Visitation
+- Confirm every sibling through census and vital records
+- Locate marriage record with Gloria Taschereau
+- Retrieve original census households
+
+## Sources
+
+- Donald H. Lemery Sr. obituary
+- Mark Anthony Lemery death certificate for the parent-child link
+- `research/reports/Deep Research Report - Haley Lemery Worthington Schneider Camp Roy and Porcello Lines.md`
