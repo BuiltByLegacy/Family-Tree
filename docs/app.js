@@ -37,9 +37,9 @@ const PEOPLE = {
   "Florence Cummings Schneider": {branch:"schneider",status:"deceased",vitals:"b. c.1919 Unity, NH – d. Jan 21, 1958 · Somers, CT",
     bio:"Mother of Linda, Frank, Norma, and three more children with Otto Schneider. Her own 1958 obituary (Springfield Union) names her parents Fred and Lestina (Smith) Cummings and confirms her burial at West Cemetery, Somers.",
     evidence:"Strongly supported (own newspaper obituary)"},
-  "Charlotte A. Worthington Schneider": {branch:"worthington",status:"deceased",vitals:"b. Sept 6, 1935 · Stafford Springs, CT",
-    bio:"Listed as a daughter of Harold and Doris Worthington in earlier research. Not named in Gordon's 2018 obituary, so her place in the 17-child family needs re-confirming.",
-    evidence:"Strongly supported, but needs reconciling against newer findings"},
+  "Charlotte A. Worthington Schneider": {branch:"worthington",status:"deceased",vitals:"Sept 6, 1935 – Oct 11, 2017 · Stafford Springs → Somers, CT",
+    bio:"Daughter of Harold and Doris Worthington; sister of Gordon R. Worthington. Her own 2017 obituary confirms she was Otto Schneider's second wife — meaning she was simultaneously Gordon's sister and Linda Schneider Worthington's stepmother, a double link between the Worthington and Schneider branches. Not named among Gordon's surviving siblings in his 2018 obituary, so her place in the 17-child sibling count still needs reconciling.",
+    evidence:"Confirmed for marriage to Otto (own obituary); strongly supported for parentage"},
   "Joyce Anna Worthington": {branch:"worthington",status:"deceased",vitals:"Jul 14, 1938 – Mar 21, 2016 · Stafford Springs, CT",
     bio:"Listed as a daughter of Harold and Doris Worthington. Like Charlotte, not named among Gordon's 2018 surviving siblings and needs reconciling.",
     evidence:"Strongly supported, but needs reconciling against newer findings"},
@@ -120,9 +120,8 @@ const STUBS = {
   "Mrs. Clifford Richardson":{branch:"schneider",note:"Named as a daughter in Florence Cummings Schneider's own 1958 obituary; maiden first name not yet identified. No individual file yet."},
   "Bruce Worthington":{branch:"worthington",note:"Named as a son of Gordon and Linda Worthington in both of their obituaries. No individual file yet."},
   "Brian Worthington":{branch:"worthington",note:"Named as a son of Gordon and Linda Worthington in both of their obituaries. No individual file yet."},
-  "Charlotte Schneider (2nd wife, unconfirmed)":{branch:"schneider",note:"A \u201cCharlotte Schneider\u201d is thanked for care in Linda's 2009 obituary — a strong but unconfirmed candidate for Otto Schneider's second wife, and a possible source of the Engelman half-siblings. No individual file yet."},
-  "Jim Engelman":{branch:"schneider",note:"Named as a brother in Linda's 2009 obituary, connected to the family through Otto's probable second marriage. No individual file yet."},
-  "Mark Engelman":{branch:"schneider",note:"Named as a brother (predeceased) in Linda's 2009 obituary, connected to the family through Otto's probable second marriage. No individual file yet."},
+  "Jim Engelman":{branch:"schneider",note:"Named as a brother in Linda's 2009 obituary. Possibly a son of Charlotte (Worthington) Schneider from a marriage before Otto \u2014 unconfirmed. No individual file yet."},
+  "Mark Engelman":{branch:"schneider",note:"Named as a brother (predeceased) in Linda's 2009 obituary. Possibly a son of Charlotte (Worthington) Schneider from a marriage before Otto \u2014 unconfirmed. No individual file yet."},
 };
 
 // Relationship labels shown in the panel (derived, not stored per-person to avoid drift)
@@ -181,8 +180,8 @@ const PARENT_EDGES = [
   ["Otto Schneider","Mrs. Clifford Richardson"],["Florence Cummings Schneider","Mrs. Clifford Richardson"],
   ["Gordon R. Worthington","Bruce Worthington"],["Linda Schneider Worthington","Bruce Worthington"],
   ["Gordon R. Worthington","Brian Worthington"],["Linda Schneider Worthington","Brian Worthington"],
-  ["Charlotte Schneider (2nd wife, unconfirmed)","Jim Engelman"],
-  ["Charlotte Schneider (2nd wife, unconfirmed)","Mark Engelman"],
+  ["Charlotte A. Worthington Schneider","Jim Engelman"],
+  ["Charlotte A. Worthington Schneider","Mark Engelman"],
 ];
 PARENT_EDGES.forEach(([p,c])=>addParent(p,c));
 
@@ -197,12 +196,12 @@ const UNIONS = [
   ["Unknown Roy Biological Father","Jessica Porcello","dotted"],
   ["Jessica Porcello","Jameson Porcello","dashed"],
   ["Jesse Mark Lemery","Haley Ann Lemery","solid"],
-  ["Otto Schneider","Charlotte Schneider (2nd wife, unconfirmed)","dotted"],
+  ["Otto Schneider","Charlotte A. Worthington Schneider","solid"],
 ];
 UNIONS.forEach(([a,b])=>addSpouse(a,b));
 
 const ROWS = [
-  {label:"Great-grandparents", items:["Honora Lemery","Delia Vanasse Lemery","Harold Worthington","Doris Adams Worthington","Otto Schneider","Florence Cummings Schneider","Charlotte Schneider (2nd wife, unconfirmed)"]},
+  {label:"Great-grandparents", items:["Honora Lemery","Delia Vanasse Lemery","Harold Worthington","Doris Adams Worthington","Otto Schneider","Florence Cummings Schneider"]},
   {label:"Grandparents & siblings", items:["Lorraine Lemery Lemieux","Robert L. Lemery","Jeanette Lemery","Donald H. Lemery Sr.","Gloria Taschereau Lemery","Charlotte A. Worthington Schneider","Joyce Anna Worthington","Kenny Worthington","Judy Worthington","Betty Worthington","Doris Ellen Worthington","David Worthington","Gordon R. Worthington","Linda Schneider Worthington","Frank O. Schneider","Norma Schneider Mudgett","Kenneth Schneider","Timothy Schneider","May Schneider Richards","Mrs. Clifford Richardson","Jim Engelman","Mark Engelman"]},
   {label:"Parents & siblings", items:["Cheryl Lemery Bocwinski","Michele Lemery Young","Donald H. Lemery Jr.","Cindylee Lemery Begin","Mark Anthony Lemery","Penny Worthington","Roger Worthington","Bruce Worthington","Brian Worthington","Unknown Roy Biological Father","Jessica Porcello","Jameson Porcello"]},
   {label:"Jesse & Haley's generation", items:["Brandon Lemery","Brock J. Lemery","Jesse Mark Lemery","Haley Ann Lemery"]},
