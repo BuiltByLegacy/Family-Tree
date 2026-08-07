@@ -211,9 +211,49 @@ const ROWS = [
 const GH_BASE = "https://github.com/BuiltByLegacy/Family-Tree/tree/main/people/";
 function ghUrl(id){ return GH_BASE + id.split("/").map(encodeURIComponent).join("/"); }
 
-/* ---------- render cards ---------- */
+/* ---------- unit grouping (pairs spouses who sit in the same row so they
+   render tightly together and share a single "bus" connector down to
+   their children — the standard genealogy-chart look) ---------- */
+const ROW_OF = {};
+ROWS.forEach((row,ri)=> row.items.forEach(id=> ROW_OF[id]=ri));
+
+// when a person has more than one same-row partner (blended families),
+// this decides which partner they render adjacent to; the other union
+// still shows correctly in the click panel, just without its own line.
+const ADJACENCY_PRIORITY = [
+  "Mark Anthony Lemery|Penny Worthington",
+  "Jessica Porcello|Jameson Porcello",
+];
+function isPriority(a,b){ return ADJACENCY_PRIORITY.includes(a+"|"+b) || ADJACENCY_PRIORITY.includes(b+"|"+a); }
+const sameRowUnions = UNIONS.filter(([a,b])=> ROW_OF[a]===ROW_OF[b])
+  .slice().sort((x,y)=> (isPriority(x[0],x[1])?0:1) - (isPriority(y[0],y[1])?0:1));
+const PARTNER_OF = {};
+sameRowUnions.forEach(([a,b])=>{ if(!PARTNER_OF[a]) PARTNER_OF[a]=b; if(!PARTNER_OF[b]) PARTNER_OF[b]=a; });
+
+function buildRowUnits(items){
+  const seen = new Set();
+  const units = [];
+  items.forEach(id=>{
+    if(seen.has(id)) return;
+    const partner = PARTNER_OF[id];
+    if(partner && items.includes(partner) && !seen.has(partner)){
+      units.push([id, partner]);
+      seen.add(id); seen.add(partner);
+    } else {
+      units.push([id]);
+      seen.add(id);
+    }
+  });
+  return units;
+}
+const ROW_UNITS = ROWS.map(row => buildRowUnits(row.items));
+// personId -> the unit (array of ids) they belong to
+const UNIT_OF = {};
+ROW_UNITS.forEach(units => units.forEach(u => u.forEach(id => UNIT_OF[id]=u)));
+
+/* ---------- render cards, grouped into unit wrappers ---------- */
 const rowsEl = document.getElementById("rows");
-ROWS.forEach(row=>{
+ROWS.forEach((row,ri)=>{
   const rowEl = document.createElement("div");
   rowEl.className = "row";
   rowEl.style.position = "relative";
@@ -221,28 +261,34 @@ ROWS.forEach(row=>{
   label.className = "row-label";
   label.textContent = row.label;
   rowEl.appendChild(label);
-  row.items.forEach(id=>{
-    const p = PEOPLE[id];
-    if(p){
-      const card = document.createElement("button");
-      card.type = "button";
-      card.className = "card " + p.branch;
-      if(p.status === "deceased") card.classList.add("deceased");
-      if(p.status === "minor") card.classList.add("minor");
-      if(p.status === "unconfirmed") card.classList.add("faint");
-      card.dataset.id = id;
-      card.innerHTML = `<span class="name">${id}</span><span class="meta">${p.vitals}</span>`;
-      card.addEventListener("click", ()=>openPanel(id));
-      rowEl.appendChild(card);
-    } else {
-      const s = STUBS[id];
-      const stub = document.createElement("div");
-      stub.className = "stub";
-      stub.dataset.id = id;
-      stub.title = s ? s.note : "No individual research file yet.";
-      stub.innerHTML = `<span class="name">${id}</span>`;
-      rowEl.appendChild(stub);
-    }
+
+  ROW_UNITS[ri].forEach(unit=>{
+    const unitEl = document.createElement("div");
+    unitEl.className = "unit" + (unit.length>1 ? " paired" : "");
+    unit.forEach(id=>{
+      const p = PEOPLE[id];
+      if(p){
+        const card = document.createElement("button");
+        card.type = "button";
+        card.className = "card " + p.branch;
+        if(p.status === "deceased") card.classList.add("deceased");
+        if(p.status === "minor") card.classList.add("minor");
+        if(p.status === "unconfirmed") card.classList.add("faint");
+        card.dataset.id = id;
+        card.innerHTML = `<span class="name">${id}</span><span class="meta">${p.vitals}</span>`;
+        card.addEventListener("click", ()=>openPanel(id));
+        unitEl.appendChild(card);
+      } else {
+        const s = STUBS[id];
+        const stub = document.createElement("div");
+        stub.className = "stub";
+        stub.dataset.id = id;
+        stub.title = s ? s.note : "No individual research file yet.";
+        stub.innerHTML = `<span class="name">${id}</span>`;
+        unitEl.appendChild(stub);
+      }
+    });
+    rowEl.appendChild(unitEl);
   });
   rowsEl.appendChild(rowEl);
 });
@@ -269,39 +315,74 @@ function drawLinks(){
   svg.setAttribute("height", canvas.scrollHeight);
   svg.innerHTML = "";
   const ns = "http://www.w3.org/2000/svg";
+  const colors = {lemery:"#8f6b3f",worthington:"#5b7a6b",schneider:"#5c7690",camp:"#a5674f",roy:"#8a5a72",core:"#c9973f"};
 
-  // spouse/union bars
+  function line(x1,y1,x2,y2,{color="#c9973f",width=1.6,style,opacity=0.55}={}){
+    const el = document.createElementNS(ns,"line");
+    el.setAttribute("x1",x1); el.setAttribute("y1",y1);
+    el.setAttribute("x2",x2); el.setAttribute("y2",y2);
+    el.setAttribute("stroke",color);
+    el.setAttribute("stroke-width",width);
+    if(style==="dashed") el.setAttribute("stroke-dasharray","6,5");
+    if(style==="dotted") el.setAttribute("stroke-dasharray","1.5,4");
+    el.setAttribute("opacity",opacity);
+    svg.appendChild(el);
+  }
+
+  // spouse/union bars — only drawn when both partners sit in the same row.
+  // A union spanning two rows (e.g. a remarriage into an adjacent
+  // generation) is real and shown in the click panel, but drawing a literal
+  // line for it would cut diagonally across an entire row of other people,
+  // so those are intentionally left undrawn here.
   UNIONS.forEach(([a,b,style])=>{
+    if(ROW_OF[a]!==ROW_OF[b]) return;
     const pa = cardCenter(a,"mid"), pb = cardCenter(b,"mid");
     if(!pa||!pb) return;
-    const line = document.createElementNS(ns,"line");
-    line.setAttribute("x1",pa.x); line.setAttribute("y1",pa.y);
-    line.setAttribute("x2",pb.x); line.setAttribute("y2",pb.y);
-    line.setAttribute("stroke","#c9973f");
-    line.setAttribute("stroke-width","2");
-    if(style==="dashed") line.setAttribute("stroke-dasharray","6,5");
-    if(style==="dotted") line.setAttribute("stroke-dasharray","1.5,4");
-    line.setAttribute("opacity","0.55");
-    svg.appendChild(line);
+    line(pa.x,pa.y,pb.x,pb.y,{color:"#c9973f",width:2,style,opacity:0.55});
   });
 
-  // parent -> child curves
+  // parent -> child connectors, drawn as a standard genealogy "bus":
+  // a drop line from the parent unit, a horizontal bar spanning the
+  // children, and a drop line into each child. Grouped by unit (not by
+  // individual edge) so two parents raising the same children share one
+  // clean connector instead of two overlapping curves. A same-row
+  // parent/child pair (e.g. a later remarriage's own children placed in
+  // the same generation band as their step-siblings) is skipped here for
+  // the same reason as above — it's fully described in the click panel.
+  const busGroups = new Map(); // key: unit (by reference) -> Set of child ids
   PARENT_EDGES.forEach(([parent,child])=>{
-    const pp = cardCenter(parent,"bottom");
-    const cc = cardCenter(child,"top");
-    if(!pp||!cc) return;
-    const midY = (pp.y + cc.y)/2;
-    const d = `M ${pp.x} ${pp.y} C ${pp.x} ${midY}, ${cc.x} ${midY}, ${cc.x} ${cc.y}`;
-    const path = document.createElementNS(ns,"path");
-    path.setAttribute("d",d);
-    path.setAttribute("fill","none");
-    const childInfo = PEOPLE[child] || STUBS[child];
-    const branch = childInfo ? childInfo.branch : null;
-    const colors = {lemery:"#8f6b3f",worthington:"#5b7a6b",schneider:"#5c7690",camp:"#a5674f",roy:"#8a5a72",core:"#c9973f"};
-    path.setAttribute("stroke", colors[branch] || "#8a7c60");
-    path.setAttribute("stroke-width", PEOPLE[child] ? "1.6" : "1.1");
-    path.setAttribute("opacity", PEOPLE[child] ? "0.5" : "0.3");
-    svg.appendChild(path);
+    if(ROW_OF[child] !== ROW_OF[parent]+1) return;
+    const unit = UNIT_OF[parent];
+    if(!unit) return;
+    if(!busGroups.has(unit)) busGroups.set(unit, new Set());
+    busGroups.get(unit).add(child);
+  });
+
+  busGroups.forEach((childSet, unit)=>{
+    const memberPts = unit.map(id=>cardCenter(id,"bottom")).filter(Boolean);
+    if(!memberPts.length) return;
+    const unionX = memberPts.reduce((s,p)=>s+p.x,0)/memberPts.length;
+    const unionY = Math.max(...memberPts.map(p=>p.y));
+    const childPts = [...childSet].map(id=>({id, pt:cardCenter(id,"top")})).filter(x=>x.pt);
+    if(!childPts.length) return;
+
+    // representative child (for line color/weight/opacity)
+    const anyChild = childPts[0].id;
+    const info = PEOPLE[anyChild] || STUBS[anyChild];
+    const weak = !PEOPLE[anyChild]; // stub = thinner, fainter
+    const color = colors[info ? info.branch : null] || "#8a7c60";
+    const opts = {color, width: weak?1.1:1.6, opacity: weak?0.32:0.5};
+
+    const busY = unionY + 26;
+    const xs = childPts.map(x=>x.pt.x);
+    const busMinX = Math.min(unionX, ...xs);
+    const busMaxX = Math.max(unionX, ...xs);
+
+    line(unionX,unionY, unionX,busY, opts);          // drop from parents
+    if(busMaxX > busMinX) line(busMinX,busY, busMaxX,busY, opts); // horizontal bus
+    childPts.forEach(({pt})=>{
+      line(pt.x,busY, pt.x,pt.y, opts);               // drop into each child
+    });
   });
 }
 

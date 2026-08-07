@@ -102,8 +102,9 @@ body{
   padding:80px 120px 140px;
 }
 #links{position:absolute;top:0;left:0;overflow:visible;pointer-events:none}
-#rows{position:relative;display:flex;flex-direction:column;gap:96px}
-.row{display:flex;align-items:flex-start;gap:34px;flex-wrap:nowrap}
+#rows{position:relative;display:flex;flex-direction:column;gap:110px}
+.row{display:flex;align-items:flex-start;gap:44px;flex-wrap:nowrap}
+.unit{display:flex;align-items:flex-start;gap:12px}
 .row-label{
   position:absolute;left:-108px;top:8px;writing-mode:vertical-rl;text-orientation:mixed;
   font-family:var(--serif);font-size:.72rem;letter-spacing:.08em;color:var(--muted-dark);text-transform:uppercase;
