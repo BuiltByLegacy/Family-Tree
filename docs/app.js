@@ -74,7 +74,7 @@ const PEOPLE = {
     bio:"Daughter of Gordon R. Worthington and Linda Schneider Worthington. Mother of Jesse Mark Lemery. A social worker; former spouse Timothy Lehan (confirmed by family testimony).",
     evidence:"Confirmed by family testimony; strongly supported by obituaries"},
   "Roger Worthington": {branch:"worthington",status:"deceased",vitals:"1966 – 1987",
-    bio:"Son of Gordon R. Worthington and Linda Schneider Worthington; sibling of Penny. Predeceased both parents — his own obituary and cause of death are not yet on file.",
+    bio:"Son of Gordon R. Worthington and Linda Schneider Worthington; sibling of Penny. Predeceased both parents at age ~20-21; neither obituary mentions a spouse or children, suggesting he had none.",
     evidence:"Strongly supported"},
   "Jessica Porcello": {branch:"camp",status:"living",vitals:"b. August 27 (year unconfirmed)",
     bio:"Born Jessica Camp. Biological mother of Haley Ann Lemery. Later surname Porcello, reportedly through marriage/partnership with Jameson Porcello — not yet documented by a marriage record.",
