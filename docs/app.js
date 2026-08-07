@@ -381,6 +381,12 @@ function drawLinks(){
     }
   });
 
+  // stagger bus depth by each unit's left-to-right position in its row,
+  // so neighboring family branches' horizontal bars sit at visibly
+  // different heights instead of running together on one line
+  const unitStagger = new Map();
+  ROW_UNITS.forEach(units=> units.forEach((u,i)=> unitStagger.set(u, i%3)));
+
   busGroups.forEach((childSet, unit)=>{
     const memberPts = unit.map(id=>cardCenter(id,"bottom")).filter(Boolean);
     if(!memberPts.length) return;
@@ -396,7 +402,8 @@ function drawLinks(){
     const color = colors[info ? info.branch : null] || "#8a7c60";
     const opts = {color, width: weak?1.1:1.6, opacity: weak?0.32:0.5};
 
-    const busY = unionY + 26;
+    const stagger = unitStagger.get(unit) || 0;
+    const busY = unionY + 22 + stagger*16;
     const xs = childPts.map(x=>x.pt.x);
     const busMinX = Math.min(unionX, ...xs);
     const busMaxX = Math.max(unionX, ...xs);
