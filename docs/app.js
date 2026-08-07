@@ -58,20 +58,20 @@ const PEOPLE = {
   "Mark Anthony Lemery": {branch:"lemery",status:"deceased",vitals:"Nov 6, 1960 – Oct 25, 2008 · Hartford → Enfield, CT",
     bio:"Son of Donald H. Lemery Sr. and Gloria Taschereau. Father of Jesse Mark Lemery (with Penny Worthington) and of Brandon and Brock J. Lemery (with Cindylee Lemery Begin).",
     evidence:"Confirmed"},
-  "Cheryl Lemery Bocwinski": {branch:"lemery",status:"deceased-or-unconfirmed",vitals:"Living status unconfirmed",
+  "Cheryl Lemery Bocwinski": {branch:"lemery",status:"living",vitals:"Living — confirmed by family testimony",
     bio:"Daughter of Donald H. Lemery Sr. and Gloria Taschereau; sibling of Mark Anthony Lemery. Initially miscatalogued as a spouse of Mark's — corrected once obituary evidence clarified she was his sister.",
-    evidence:"Strongly supported"},
-  "Michele Lemery Young": {branch:"lemery",status:"deceased-or-unconfirmed",vitals:"Living status unconfirmed",
-    bio:"Daughter of Donald H. Lemery Sr. and Gloria Taschereau; sibling of Mark Anthony Lemery. Name variants Michele/Michelle and married surnames Young/Cleveland both appear in research.",
-    evidence:"Strongly supported"},
+    evidence:"Confirmed (family testimony) for living status; strongly supported for parentage"},
+  "Michelle Lemery Cleveland": {branch:"lemery",status:"living",vitals:"Living — confirmed by family testimony",
+    bio:"Daughter of Donald H. Lemery Sr. and Gloria Taschereau; sibling of Mark Anthony Lemery. Family confirms the spelling \u201cMichelle\u201d and surname history Young \u2192 Cleveland.",
+    evidence:"Confirmed (family testimony)"},
   "Donald H. Lemery Jr.": {branch:"lemery",status:"deceased",vitals:"c.1961 – c.1971 (reported)",
     bio:"Son of Donald H. Lemery Sr. and Gloria Taschereau; predeceased both parents according to their obituaries.",
     evidence:"Strongly supported"},
   "Cindylee Lemery Begin": {branch:"lemery",status:"living",vitals:"Living",
-    bio:"Mother of Brock J. Lemery (confirmed via his obituary) and reportedly of Brandon Lemery as well. Former partner of Mark Anthony Lemery.",
+    bio:"Mother of Brandon Lemery and Brock J. Lemery — confirmed by family testimony and Brock's obituary. Former partner of Mark Anthony Lemery.",
     evidence:"Strongly supported for Brock; possible for Brandon"},
   "Penny Worthington": {branch:"worthington",status:"living",vitals:"b. c.1964 · Hartford, CT",
-    bio:"Daughter of Gordon R. Worthington and Linda Schneider Worthington. Mother of Jesse Mark Lemery. A social worker; former spouse reported as Timothy Lehan.",
+    bio:"Daughter of Gordon R. Worthington and Linda Schneider Worthington. Mother of Jesse Mark Lemery. A social worker; former spouse Timothy Lehan (confirmed by family testimony).",
     evidence:"Confirmed by family testimony; strongly supported by obituaries"},
   "Roger Worthington": {branch:"worthington",status:"deceased",vitals:"1966 – 1987",
     bio:"Son of Gordon R. Worthington and Linda Schneider Worthington; sibling of Penny. Predeceased both parents — his own obituary and cause of death are not yet on file.",
@@ -92,8 +92,8 @@ const PEOPLE = {
     bio:"Born Haley Ann Roy; adopted as Haley Ann Porcello; married name Lemery. Biological mother Jessica (Camp) Porcello; biological father unresolved (Roy surname only); adoptive father Jameson Porcello.",
     evidence:"Confirmed for immediate family; adoption/paternal identity still open research"},
   "Brandon Lemery": {branch:"lemery",status:"living",vitals:"Living",
-    bio:"Son of Mark Anthony Lemery, reportedly with Cindylee Lemery Begin. Brother of Jesse Mark Lemery and the late Brock J. Lemery.",
-    evidence:"Strongly supported; maternity needs direct verification"},
+    bio:"Son of Mark Anthony Lemery and Cindylee Lemery Begin (confirmed by family testimony). Brother of Jesse Mark Lemery and the late Brock J. Lemery. Father of Dallas and Dominic Lemery.",
+    evidence:"Confirmed (family testimony)"},
   "Brock J. Lemery": {branch:"lemery",status:"deceased",vitals:"Sept 5, 1990 – Sept 25, 2013",
     bio:"Son of Mark Anthony Lemery and Cindylee Lemery Begin. Brother of Jesse Mark Lemery and Brandon Lemery.",
     evidence:"Strongly supported"},
@@ -127,6 +127,8 @@ const STUBS = {
   "Elaine L. Lemieux":{branch:"lemery",note:"Daughter of Lorraine and Joseph Lemieux; predeceased her mother, per Lorraine's 2015 obituary. No individual file yet."},
   "Roger Lemieux":{branch:"lemery",note:"Son of Lorraine and Joseph Lemieux; predeceased his mother, per Lorraine's 2015 obituary. No individual file yet."},
   "Michael Lemieux":{branch:"lemery",note:"Son of Lorraine and Joseph Lemieux; predeceased his mother in 2014. Own obituary confirms parents, wife Brenda, daughter Jennifer. No individual file yet."},
+  "Dallas Lemery":{branch:"lemery",note:"Son of Brandon Lemery, confirmed by family testimony. No individual file yet."},
+  "Dominic Lemery":{branch:"lemery",note:"Son of Brandon Lemery, confirmed by family testimony. No individual file yet."},
   "Brian Worthington":{branch:"worthington",note:"Named as a son of Gordon and Linda Worthington in both of their obituaries. No individual file yet."},
   "Jim Engelman":{branch:"schneider",note:"Named as a brother in Linda's 2009 obituary. Possibly a son of Charlotte (Worthington) Schneider from a marriage before Otto \u2014 unconfirmed. No individual file yet."},
   "Mark Engelman":{branch:"schneider",note:"Named as a brother (predeceased) in Linda's 2009 obituary. Possibly a son of Charlotte (Worthington) Schneider from a marriage before Otto \u2014 unconfirmed. No individual file yet."},
@@ -159,7 +161,7 @@ const PARENT_EDGES = [
 
   ["Donald H. Lemery Sr.","Mark Anthony Lemery"],["Gloria Taschereau Lemery","Mark Anthony Lemery"],
   ["Donald H. Lemery Sr.","Cheryl Lemery Bocwinski"],["Gloria Taschereau Lemery","Cheryl Lemery Bocwinski"],
-  ["Donald H. Lemery Sr.","Michele Lemery Young"],["Gloria Taschereau Lemery","Michele Lemery Young"],
+  ["Donald H. Lemery Sr.","Michelle Lemery Cleveland"],["Gloria Taschereau Lemery","Michelle Lemery Cleveland"],
   ["Donald H. Lemery Sr.","Donald H. Lemery Jr."],["Gloria Taschereau Lemery","Donald H. Lemery Jr."],
 
   ["Gordon R. Worthington","Penny Worthington"],["Linda Schneider Worthington","Penny Worthington"],
@@ -175,6 +177,7 @@ const PARENT_EDGES = [
 
   ["Jesse Mark Lemery","Olivia Judith Lemery"],["Haley Ann Lemery","Olivia Judith Lemery"],
   ["Jesse Mark Lemery","Liam Lemery"],["Haley Ann Lemery","Liam Lemery"],
+  ["Brandon Lemery","Dallas Lemery"],["Brandon Lemery","Dominic Lemery"],
 
   // stub relatives (no individual research file yet)
   ["Harold Worthington","Kenny Worthington"],["Doris Adams Worthington","Kenny Worthington"],
@@ -219,9 +222,9 @@ UNIONS.forEach(([a,b])=>addSpouse(a,b));
 const ROWS = [
   {label:"Great-grandparents", items:["Honora Lemery","Delia Vanasse Lemery","Harold Worthington","Doris Adams Worthington","Otto Schneider","Florence Cummings Schneider"]},
   {label:"Grandparents & siblings", items:["Lorraine Lemery Lemieux","Joseph R. Lemieux","Robert L. Lemery","Jeanette Lemery","Donald H. Lemery Sr.","Gloria Taschereau Lemery","Charlotte A. Worthington Schneider","Joyce Anna Worthington","Kenny Worthington","Judy Worthington","Betty Worthington","Doris Ellen Worthington","David Worthington","Gordon R. Worthington","Linda Schneider Worthington","Frank O. Schneider","Norma Schneider Mudgett","Kenneth Schneider","Timothy Schneider","May Schneider Richards","Mrs. Clifford Richardson","Jim Engelman","Mark Engelman"]},
-  {label:"Parents & siblings", items:["Rejeanne M. Lukach","Marcel T. Lemieux","John P. Lemieux","Richard J. Lemieux","Elaine L. Lemieux","Roger Lemieux","Michael Lemieux","Cheryl Lemery Bocwinski","Michele Lemery Young","Donald H. Lemery Jr.","Cindylee Lemery Begin","Mark Anthony Lemery","Penny Worthington","Roger Worthington","Bruce Worthington","Brian Worthington","Unknown Roy Biological Father","Jessica Porcello","Jameson Porcello"]},
+  {label:"Parents & siblings", items:["Rejeanne M. Lukach","Marcel T. Lemieux","John P. Lemieux","Richard J. Lemieux","Elaine L. Lemieux","Roger Lemieux","Michael Lemieux","Cheryl Lemery Bocwinski","Michelle Lemery Cleveland","Donald H. Lemery Jr.","Cindylee Lemery Begin","Mark Anthony Lemery","Penny Worthington","Roger Worthington","Bruce Worthington","Brian Worthington","Unknown Roy Biological Father","Jessica Porcello","Jameson Porcello"]},
   {label:"Jesse & Haley's generation", items:["Brandon Lemery","Brock J. Lemery","Jesse Mark Lemery","Haley Ann Lemery"]},
-  {label:"Children", items:["Olivia Judith Lemery","Liam Lemery"]},
+  {label:"Children", items:["Olivia Judith Lemery","Liam Lemery","Dallas Lemery","Dominic Lemery"]},
 ];
 
 const GH_BASE = "https://github.com/BuiltByLegacy/Family-Tree/tree/main/people/";

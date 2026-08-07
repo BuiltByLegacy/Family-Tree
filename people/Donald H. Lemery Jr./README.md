@@ -3,7 +3,7 @@
 ## Known relationships
 - Father: Donald H. Lemery Sr.
 - Mother: Gloria Taschereau
-- Siblings: Mark Anthony Lemery; Cheryl Lemery Bocwinski; Michele/Michelle Lemery
+- Siblings: Mark Anthony Lemery; Cheryl Lemery Bocwinski; Michelle (Lemery) Cleveland
 
 ## Reported dates
 Born approximately 1961 and died in 1971, according to prior genealogy and obituary leads.

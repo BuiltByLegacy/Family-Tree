@@ -3,7 +3,10 @@
 ## Known relationships
 - Father: Donald H. Lemery Sr.
 - Mother: Gloria Taschereau
-- Siblings: Mark Anthony Lemery; Donald H. Lemery Jr.; Michele/Michelle Lemery
+- Siblings: Mark Anthony Lemery; Donald H. Lemery Jr.; Michelle (Lemery) Cleveland
+
+## Status
+Living — confirmed by family testimony.
 
 ## Evidence status
 Strongly supported by the obituaries of Gloria and Mark.
@@ -17,4 +20,4 @@ Cheryl was initially misunderstood as one of Mark's spouses. Obituary evidence i
 - Save supporting obituaries
 
 ## Privacy
-Living status is not yet confirmed; use living-person protections.
+Living person. Use living-person protections.

@@ -15,7 +15,7 @@
 ## Relationships
 
 - Former husband: Donald H. Lemery Sr.
-- Children named in obituary: Mark Anthony Lemery, Cheryl Lemery Bocwinski, Michele Lemery Young, and Donald H. Lemery Jr., who predeceased her
+- Children named in obituary: Mark Anthony Lemery, Cheryl Lemery Bocwinski, Michelle Lemery Cleveland, and Donald H. Lemery Jr., who predeceased her
 - Siblings: Donald Taschereau and Beverly Verizzi
 - Parents: unresolved
 

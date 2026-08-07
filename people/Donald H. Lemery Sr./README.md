@@ -15,7 +15,7 @@
 - Father: Honora Lemery
 - Mother: Delia Vanasse Lemery
 - Former wife: Gloria Taschereau Lemery
-- Children reported: Mark Anthony Lemery, Donald H. Lemery Jr., Cheryl Lemery Bocwinski, and Michele Lemery Young
+- Children reported: Mark Anthony Lemery, Donald H. Lemery Jr., Cheryl Lemery Bocwinski, and Michelle Lemery Cleveland
 - Siblings: Lorraine Lemery Lemieux survived him; three other siblings reportedly predeceased him, with Robert and Jeanette identified in collateral research and at least one still unresolved
 
 ## Evidence summary

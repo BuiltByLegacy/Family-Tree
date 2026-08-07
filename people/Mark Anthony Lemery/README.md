@@ -13,7 +13,7 @@
 ## Family
 - Son: Jesse Mark Lemery
 - Other children/household relationships named in obituary research: Brandon Lemery, Brock J. Lemery, Jesse LaFerriere, Michael LaFerriere, Nicholas LaFerriere, and Dylan LaFerriere
-- Sisters: Cheryl Lemery Bocwinski and Michele/Michelle Lemery
+- Sisters: Cheryl Lemery Bocwinski and Michelle (Lemery) Cleveland
 - Brother: Donald H. Lemery Jr.
 - Surviving spouse named on death certificate: Lisa D'Aleo
 
