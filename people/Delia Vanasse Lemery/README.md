@@ -1,22 +1,27 @@
 # Delia Vanasse Lemery
 
-- **Status:** Deceased, exact dates and places unverified
-- **Evidence status:** High for name and relationship to Donald H. Lemery Sr.; earlier ancestry unresolved
+- **Status:** Deceased
+- **Evidence status:** High for relationship to Donald H. Lemery Sr.; Strongly Supported for spouse link to Honora; Possible for 1894–1967 life span and 1923 marriage pending independent records
 - **Branches:** Vanasse, Lemery
 
 ## Identity
 
-Donald H. Lemery Sr.'s obituary identifies his mother as **Delia (Vanasse) Lemery**, strongly supporting Vanasse as her maiden or prior surname.
+Donald H. Lemery Sr.'s obituary identifies his mother as **Delia (Vanasse) Lemery**, strongly supporting Vanasse as her maiden surname.
+
+## Vital events
+
+- Reported life span on Find a Grave: **1894–1967** — Possible / derivative
+- Reported marriage to Honora Rosa Lemery: **1923** — Possible / derivative
 
 ## Relationships
 
-- Spouse or partner: Honora Lemery
-- Son: Donald H. Lemery Sr., born September 12, 1924 in Putnam
-- Reported additional children: Lorraine, Robert, Jeanette, and at least one unidentified sibling; records needed
+- Spouse: **Honora Rosa Lemery**
+- Son: **Donald H. Lemery Sr. (1924–2011)**
+- Reported additional children from prior research include Lorraine, Robert, Jeanette, and at least one unidentified sibling; each still requires documentary confirmation
 
 ## Evidence summary
 
-The parent-child link to Donald is high confidence through his obituary. Reported dates previously associated with Delia remain unverified until supported by original vital or cemetery records.
+Donald's obituary independently identifies Delia Vanasse Lemery as his mother. A Find a Grave memorial for Honora Rosa Lemery independently links Delia as spouse and reports a 1923 marriage and life span of 1894–1967. These Find a Grave details are derivative and should be verified with civil, parish, census, cemetery, or obituary evidence before being treated as confirmed.
 
 ## Search variants
 
@@ -26,19 +31,16 @@ The parent-child link to Donald is high confidence through his obituary. Reporte
 - Delima
 - Vanasse / Vanass / Vanace / Vannasse
 
-French-language variants must fit spouse, children, age, migration, and locality. A Quebec name match alone is not evidence of identity.
-
 ## Priority records
 
-1. Donald's 1924 birth certificate
-2. Civil and Catholic marriage records with Honora
-3. Original 1930, 1940, and 1950 census households
-4. Delia's death certificate and obituary
-5. Cemetery register and probate records
-6. Children's baptism and vital records
-7. Quebec records only after a U.S. record identifies a Canadian birthplace or parents
+1. Locate Honora + Delia's 1923 civil/Catholic marriage record
+2. Locate original 1930/1940/1950 U.S. census household
+3. Find Delia's cemetery/death/obituary records to verify 1894–1967
+4. Confirm all children through census, baptism, vital, and obituary records
+5. Bridge to Quebec only after a U.S. record establishes Delia's age/birthplace/parents
 
 ## Sources
 
 - Donald H. Lemery Sr. obituary, derivative source
+- User-supplied Find a Grave screenshots for Honora Rosa Lemery, Memorial ID **98024000**, showing Delia as spouse and reporting marriage in 1923
 - `research/reports/Deep Research Report - Haley Lemery Worthington Schneider Camp Roy and Porcello Lines.md`
