@@ -67,7 +67,7 @@ const PEOPLE = {
   "Donald H. Lemery Jr.": {branch:"lemery",status:"deceased",vitals:"c.1961 – c.1971 (reported)",
     bio:"Son of Donald H. Lemery Sr. and Gloria Taschereau; predeceased both parents according to their obituaries.",
     evidence:"Strongly supported"},
-  "Cindylee Lemery Begin": {branch:"lemery",status:"living",vitals:"Living — details restricted",
+  "Cindylee Lemery Begin": {branch:"lemery",status:"living",vitals:"Living",
     bio:"Mother of Brock J. Lemery (confirmed via his obituary) and reportedly of Brandon Lemery as well. Former partner of Mark Anthony Lemery.",
     evidence:"Strongly supported for Brock; possible for Brandon"},
   "Penny Worthington": {branch:"worthington",status:"living",vitals:"b. c.1964 · Hartford, CT",
@@ -76,7 +76,7 @@ const PEOPLE = {
   "Roger Worthington": {branch:"worthington",status:"deceased",vitals:"1966 – 1987",
     bio:"Son of Gordon R. Worthington and Linda Schneider Worthington; sibling of Penny. Predeceased both parents — his own obituary and cause of death are not yet on file.",
     evidence:"Strongly supported"},
-  "Jessica Porcello": {branch:"camp",status:"living",vitals:"Living — details restricted",
+  "Jessica Porcello": {branch:"camp",status:"living",vitals:"b. August 27 (year unconfirmed)",
     bio:"Born Jessica Camp. Biological mother of Haley Ann Lemery. Later surname Porcello, reportedly through marriage/partnership with Jameson Porcello — not yet documented by a marriage record.",
     evidence:"Moderate — relationship confirmed by family, records still needed"},
   "Unknown Roy Biological Father": {branch:"roy",status:"unconfirmed",vitals:"Identity unknown",
@@ -88,10 +88,10 @@ const PEOPLE = {
   "Jesse Mark Lemery": {branch:"core",status:"living",vitals:"b. Sept 7, 1994 · Rockville, CT",
     bio:"Son of Mark Anthony Lemery and Penny Worthington. Husband of Haley Ann Lemery; father of Olivia Judith Lemery and Liam Lemery.",
     evidence:"Confirmed"},
-  "Haley Ann Lemery": {branch:"core",status:"living",vitals:"Living — details restricted",
+  "Haley Ann Lemery": {branch:"core",status:"living",vitals:"Living",
     bio:"Born Haley Ann Roy; adopted as Haley Ann Porcello; married name Lemery. Biological mother Jessica (Camp) Porcello; biological father unresolved (Roy surname only); adoptive father Jameson Porcello.",
     evidence:"Confirmed for immediate family; adoption/paternal identity still open research"},
-  "Brandon Lemery": {branch:"lemery",status:"living",vitals:"Living — details restricted",
+  "Brandon Lemery": {branch:"lemery",status:"living",vitals:"Living",
     bio:"Son of Mark Anthony Lemery, reportedly with Cindylee Lemery Begin. Brother of Jesse Mark Lemery and the late Brock J. Lemery.",
     evidence:"Strongly supported; maternity needs direct verification"},
   "Brock J. Lemery": {branch:"lemery",status:"deceased",vitals:"Sept 5, 1990 – Sept 25, 2013",
@@ -218,24 +218,35 @@ const ROW_OF = {};
 ROWS.forEach((row,ri)=> row.items.forEach(id=> ROW_OF[id]=ri));
 
 // when a person has more than one same-row partner (blended families),
-// this decides which partner they render adjacent to; the other union
-// still shows correctly in the click panel, just without its own line.
+// this decides which partner they render adjacent to and share a bus
+// with; the other union still gets its own short connecting line and
+// shows correctly in the click panel — it just doesn't drive the bus.
 const ADJACENCY_PRIORITY = [
   "Mark Anthony Lemery|Penny Worthington",
   "Jessica Porcello|Jameson Porcello",
 ];
-function isPriority(a,b){ return ADJACENCY_PRIORITY.includes(a+"|"+b) || ADJACENCY_PRIORITY.includes(b+"|"+a); }
-const sameRowUnions = UNIONS.filter(([a,b])=> ROW_OF[a]===ROW_OF[b])
-  .slice().sort((x,y)=> (isPriority(x[0],x[1])?0:1) - (isPriority(y[0],y[1])?0:1));
-const PARTNER_OF = {};
-sameRowUnions.forEach(([a,b])=>{ if(!PARTNER_OF[a]) PARTNER_OF[a]=b; if(!PARTNER_OF[b]) PARTNER_OF[b]=a; });
+const sameRowUnions = UNIONS.filter(([a,b])=> ROW_OF[a]===ROW_OF[b]);
+
+// resolve exactly one primary partner per person, priority pairs first,
+// so a name appearing earlier in a row's item list can't "steal" a
+// partner that a later-listed priority pair was meant to claim.
+const PRIMARY_PARTNER_OF = {};
+ADJACENCY_PRIORITY.forEach(pairStr=>{
+  const [a,b] = pairStr.split("|");
+  PRIMARY_PARTNER_OF[a]=b; PRIMARY_PARTNER_OF[b]=a;
+});
+sameRowUnions.forEach(([a,b])=>{
+  if(!PRIMARY_PARTNER_OF[a] && !PRIMARY_PARTNER_OF[b]){
+    PRIMARY_PARTNER_OF[a]=b; PRIMARY_PARTNER_OF[b]=a;
+  }
+});
 
 function buildRowUnits(items){
   const seen = new Set();
   const units = [];
   items.forEach(id=>{
     if(seen.has(id)) return;
-    const partner = PARTNER_OF[id];
+    const partner = PRIMARY_PARTNER_OF[id];
     if(partner && items.includes(partner) && !seen.has(partner)){
       units.push([id, partner]);
       seen.add(id); seen.add(partner);
@@ -345,17 +356,29 @@ function drawLinks(){
   // a drop line from the parent unit, a horizontal bar spanning the
   // children, and a drop line into each child. Grouped by unit (not by
   // individual edge) so two parents raising the same children share one
-  // clean connector instead of two overlapping curves. A same-row
-  // parent/child pair (e.g. a later remarriage's own children placed in
-  // the same generation band as their step-siblings) is skipped here for
-  // the same reason as above — it's fully described in the click panel.
-  const busGroups = new Map(); // key: unit (by reference) -> Set of child ids
+  // clean connector instead of two overlapping curves. If only ONE member
+  // of a couple-unit is actually a child's parent (a blended family, e.g.
+  // a parent's children with an earlier partner), that child is drawn
+  // with its own individual line from just that parent's card — sharing
+  // the couple's bus would falsely suggest the other partner co-parented
+  // them. A same-row parent/child pair (e.g. a later remarriage's own
+  // children placed in the same generation band as their step-siblings)
+  // is skipped entirely for the same reason as cross-row unions above —
+  // it's fully described in the click panel.
+  const busGroups = new Map(); // unit -> Set of child ids (full match)
+  const soloEdges = [];        // [parentId, childId] (partial match)
   PARENT_EDGES.forEach(([parent,child])=>{
     if(ROW_OF[child] !== ROW_OF[parent]+1) return;
     const unit = UNIT_OF[parent];
     if(!unit) return;
-    if(!busGroups.has(unit)) busGroups.set(unit, new Set());
-    busGroups.get(unit).add(child);
+    const childParents = new Set(PARENTS[child] || []);
+    const fullMatch = unit.length===1 || unit.every(m=>childParents.has(m));
+    if(fullMatch){
+      if(!busGroups.has(unit)) busGroups.set(unit, new Set());
+      busGroups.get(unit).add(child);
+    } else {
+      soloEdges.push([parent, child]);
+    }
   });
 
   busGroups.forEach((childSet, unit)=>{
@@ -383,6 +406,21 @@ function drawLinks(){
     childPts.forEach(({pt})=>{
       line(pt.x,busY, pt.x,pt.y, opts);               // drop into each child
     });
+  });
+
+  // individual lines for partial-match (blended-family) parent/child edges
+  soloEdges.forEach(([parent,child])=>{
+    const pp = cardCenter(parent,"bottom");
+    const cc = cardCenter(child,"top");
+    if(!pp||!cc) return;
+    const info = PEOPLE[child] || STUBS[child];
+    const weak = !PEOPLE[child];
+    const color = colors[info ? info.branch : null] || "#8a7c60";
+    const opts = {color, width: weak?1.1:1.6, opacity: weak?0.4:0.6, style:"dashed"};
+    const busY = pp.y + 26;
+    line(pp.x,pp.y, pp.x,busY, opts);
+    line(pp.x,busY, cc.x,busY, opts);
+    line(cc.x,busY, cc.x,cc.y, opts);
   });
 }
 
