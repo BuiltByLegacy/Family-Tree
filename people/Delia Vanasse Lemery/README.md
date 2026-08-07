@@ -1,27 +1,27 @@
 # Delia Vanasse Lemery
 
 - **Status:** Deceased
-- **Evidence status:** High for relationship to Donald H. Lemery Sr.; Strongly Supported for spouse link to Honora; Possible for 1894–1967 life span and 1923 marriage pending independent records
+- **Evidence status:** High for relationship to Donald H. Lemery Sr.; Strongly Supported for exact dates and burial from memorial + grave photograph; Strongly Supported for spouse link to Honora; marriage year still derivative
 - **Branches:** Vanasse, Lemery
-
-## Identity
-
-Donald H. Lemery Sr.'s obituary identifies his mother as **Delia (Vanasse) Lemery**, strongly supporting Vanasse as her maiden surname.
 
 ## Vital events
 
-- Reported life span on Find a Grave: **1894–1967** — Possible / derivative
-- Reported marriage to Honora Rosa Lemery: **1923** — Possible / derivative
+- Birth: **May 9, 1894** — Strongly Supported by Find a Grave memorial and photographed grave marker
+- Birthplace: **Unresolved**
+- Death: **April 10, 1967** — Strongly Supported by memorial and grave marker
+- Reported death place: **Hartford, Hartford County, Connecticut** — Strongly Supported by memorial; original death record still preferred
+- Burial: **Mount Saint Benedict Cemetery, Bloomfield, Hartford County, Connecticut** — Strongly Supported
 
 ## Relationships
 
-- Spouse: **Honora Rosa Lemery**
-- Son: **Donald H. Lemery Sr. (1924–2011)**
+- Spouse: **Honora Rosa Lemery (1903–1979)** — Strongly Supported by reciprocal Find a Grave links and Donald's obituary context
+- Reported marriage: **1923** — Possible / derivative memorial data
+- Son: **Donald H. Lemery Sr. (1924–2011)** — High through Donald's obituary and memorial linkage
 - Reported additional children from prior research include Lorraine, Robert, Jeanette, and at least one unidentified sibling; each still requires documentary confirmation
 
 ## Evidence summary
 
-Donald's obituary independently identifies Delia Vanasse Lemery as his mother. A Find a Grave memorial for Honora Rosa Lemery independently links Delia as spouse and reports a 1923 marriage and life span of 1894–1967. These Find a Grave details are derivative and should be verified with civil, parish, census, cemetery, or obituary evidence before being treated as confirmed.
+Donald's obituary independently identifies Delia (Vanasse) Lemery as his mother. A user-supplied Find a Grave screenshot for **Delia Vanasse Lemery, Memorial ID 98023985**, reports her exact birth and death dates, death place, burial, spouse, marriage year, and son Donald. The photographed grave marker visibly supports **May 9, 1894 – April 10, 1967**. The memorial relationship links remain derivative and should be verified with civil, parish, census, or obituary evidence.
 
 ## Search variants
 
@@ -33,14 +33,15 @@ Donald's obituary independently identifies Delia Vanasse Lemery as his mother. A
 
 ## Priority records
 
-1. Locate Honora + Delia's 1923 civil/Catholic marriage record
-2. Locate original 1930/1940/1950 U.S. census household
-3. Find Delia's cemetery/death/obituary records to verify 1894–1967
+1. Locate Honora + Delia's **1923 civil/Catholic marriage record**
+2. Locate original **1930/1940/1950 U.S. census household**
+3. Locate Delia's 1967 Connecticut death record/obituary
 4. Confirm all children through census, baptism, vital, and obituary records
-5. Bridge to Quebec only after a U.S. record establishes Delia's age/birthplace/parents
+5. Bridge to Quebec only after a U.S. record establishes Delia's birthplace or parents
 
 ## Sources
 
 - Donald H. Lemery Sr. obituary, derivative source
-- User-supplied Find a Grave screenshots for Honora Rosa Lemery, Memorial ID **98024000**, showing Delia as spouse and reporting marriage in 1923
-- `research/reports/Deep Research Report - Haley Lemery Worthington Schneider Camp Roy and Porcello Lines.md`
+- User-supplied Find a Grave screenshot for Delia Vanasse Lemery, Memorial ID **98023985**
+- User-supplied photograph of Delia's grave marker at Mount Saint Benedict Cemetery
+- User-supplied Find a Grave screenshots for Honora Rosa Lemery, Memorial ID **98024000**
