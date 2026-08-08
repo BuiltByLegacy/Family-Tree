@@ -18,7 +18,7 @@
 
 ## Parents — NEW, from the marriage record
 
-The record identifies Alida as **"fille mineure de Philibert Dufresne cultivateur et de [Éliesse?] Rocheleau"** — minor daughter of Philibert Dufresne, farmer, and of [Éliesse? — exact given name uncertain from the handwriting] Rocheleau, both of Saint-Damase parish.
+The record identifies Alida as **"fille mineure de Philibert Dufresne cultivateur et de [Élionne? / Élisonne?] Rocheleau"** — minor daughter of Philibert Dufresne, farmer, and of [Éliesse? — exact given name uncertain from the handwriting] Rocheleau, both of Saint-Damase parish.
 
 - **Father: Philibert Dufresne** — a farmer (cultivateur), living at the time of the marriage; signed the register as a witness, described as "père de l'épouse" (father of the bride)
 - **Mother: [given name uncertain] Rocheleau** — maiden name confirmed as Rocheleau; exact given name needs a clearer reading of the original record (possibly "Éliesse," "Élise," or similar)

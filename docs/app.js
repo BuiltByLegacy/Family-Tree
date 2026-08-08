@@ -4,6 +4,21 @@
    file, and omits sensitive details about living minors per PRIVACY.md. */
 
 const PEOPLE = {
+  "Adéiodat Lemery": {branch:"lemery",status:"deceased",vitals:"d. before Oct 1896",
+    bio:"Roel Joseph Lemery's father. Confirmed deceased by the time of Roel's 1896 marriage, via the original Saint-Damase parish marriage register (\u201cfils mineur de d\u00e9funt Ad\u00e9iodat Lemery\u201d). Corrects an earlier speculative guess of \u201cAdelard Lemery.\u201d",
+    evidence:"Confirmed (original 1896 marriage register)"},
+  "Joséphine Roy": {branch:"lemery",status:"deceased",vitals:"living as of Oct 1896",
+    bio:"Roel Joseph Lemery's mother. Named in his 1896 marriage record. Likely remarried Paul Lussier, who signed that record as Roel's stepfather (\u201cbeau-p\u00e8re de l'\u00e9poux\u201d) \u2014 not yet independently confirmed.",
+    evidence:"Confirmed as mother (original 1896 marriage register); remarriage to Lussier unconfirmed"},
+  "Philibert Dufresne": {branch:"lemery",status:"deceased",vitals:"farmer, living as of Oct 1896",
+    bio:"Alida Dufresne's father, a farmer (cultivateur) at Saint-Damase. Personally attended and signed his daughter's 1896 marriage register as \u201cp\u00e8re de l'\u00e9pouse.\u201d",
+    evidence:"Confirmed (original 1896 marriage register)"},
+  "Alida DuFresne Lemery": {branch:"lemery",status:"deceased",vitals:"Aug 12, 1878 – Aug 28, 1951 · Québec → Danielson, CT",
+    bio:"Daughter of Philibert Dufresne and [Rocheleau]. Married Roel Joseph Lemery on Oct 27, 1896 at Saint-Damase, Qu\u00e9bec \u2014 confirmed via the original parish marriage register. Reported mother of Honora Rosa Lemery and six other children per Find a Grave (still Possible/derivative for the children specifically).",
+    evidence:"Confirmed (own marriage, via original 1896 parish register); Possible for children"},
+  "Roel Joseph Lemery": {branch:"lemery",status:"deceased",vitals:"Nov 24, 1877 – Jun 5, 1941 · Warwick, RI → Danielson, CT",
+    bio:"Son of Ad\u00e9iodat Lemery (deceased by 1896) and Jos\u00e9phine Roy. Married Alida Dufresne on Oct 27, 1896 at Saint-Damase, Qu\u00e9bec \u2014 confirmed via the original parish marriage register, which also newly identified his parents. Reported father of Honora Rosa Lemery and six other children per Find a Grave (still Possible/derivative for the children specifically).",
+    evidence:"Confirmed (own marriage, via original 1896 parish register); Possible for children"},
   "Honora Lemery": {branch:"lemery",status:"deceased",vitals:"Dates unknown",
     bio:"Father of Donald H. Lemery Sr., established through Donald's 2011 obituary. Earlier ancestry (birthplace, parents, immigration) remains unresearched.",
     evidence:"High for the parent link · low beyond it"},
@@ -132,6 +147,8 @@ const STUBS = {
   "Brian Worthington":{branch:"worthington",note:"Named as a son of Gordon and Linda Worthington in both of their obituaries. No individual file yet."},
   "Jim Engelman":{branch:"schneider",note:"Named as a brother in Linda's 2009 obituary. Possibly a son of Charlotte (Worthington) Schneider from a marriage before Otto \u2014 unconfirmed. No individual file yet."},
   "Mark Engelman":{branch:"schneider",note:"Named as a brother (predeceased) in Linda's 2009 obituary. Possibly a son of Charlotte (Worthington) Schneider from a marriage before Otto \u2014 unconfirmed. No individual file yet."},
+  "Paul Lussier":{branch:"lemery",note:"Signed Roel Lemery's 1896 marriage register as \u201cbeau-p\u00e8re de l'\u00e9poux\u201d (stepfather of the groom), implying he remarried Roel's mother Jos\u00e9phine Roy after her first husband's death \u2014 not yet independently confirmed. No individual file yet."},
+  "[Élionne? / Élisonne?] Rocheleau":{branch:"lemery",note:"Alida Dufresne's mother. Surname confirmed as Rocheleau from the 1896 marriage register; the given name is a best-effort reading of difficult handwriting and remains uncertain. No individual file yet."},
 };
 
 // Relationship labels shown in the panel (derived, not stored per-person to avoid drift)
@@ -146,6 +163,10 @@ function addSpouse(a,b){
 }
 
 const PARENT_EDGES = [
+  ["Adéiodat Lemery","Roel Joseph Lemery"],["Joséphine Roy","Roel Joseph Lemery"],
+  ["Philibert Dufresne","Alida DuFresne Lemery"],["[Élionne? / Élisonne?] Rocheleau","Alida DuFresne Lemery"],
+  ["Roel Joseph Lemery","Honora Lemery"],["Alida DuFresne Lemery","Honora Lemery"],
+
   ["Honora Lemery","Donald H. Lemery Sr."],["Delia Vanasse Lemery","Donald H. Lemery Sr."],
   ["Honora Lemery","Lorraine Lemery Lemieux"],["Delia Vanasse Lemery","Lorraine Lemery Lemieux"],
   ["Honora Lemery","Robert L. Lemery"],["Delia Vanasse Lemery","Robert L. Lemery"],
@@ -204,6 +225,10 @@ const PARENT_EDGES = [
 PARENT_EDGES.forEach(([p,c])=>addParent(p,c));
 
 const UNIONS = [
+  ["Adéiodat Lemery","Joséphine Roy","solid"],
+  ["Joséphine Roy","Paul Lussier","dashed"],
+  ["Philibert Dufresne","[Élionne? / Élisonne?] Rocheleau","solid"],
+  ["Roel Joseph Lemery","Alida DuFresne Lemery","solid"],
   ["Honora Lemery","Delia Vanasse Lemery","solid"],
   ["Harold Worthington","Doris Adams Worthington","solid"],
   ["Otto Schneider","Florence Cummings Schneider","solid"],
@@ -220,6 +245,8 @@ const UNIONS = [
 UNIONS.forEach(([a,b])=>addSpouse(a,b));
 
 const ROWS = [
+  {label:"Great-great-great-grandparents", items:["Adéiodat Lemery","Joséphine Roy","Paul Lussier","Philibert Dufresne","[Élionne? / Élisonne?] Rocheleau"]},
+  {label:"Great-great-grandparents", items:["Roel Joseph Lemery","Alida DuFresne Lemery"]},
   {label:"Great-grandparents", items:["Honora Lemery","Delia Vanasse Lemery","Harold Worthington","Doris Adams Worthington","Otto Schneider","Florence Cummings Schneider"]},
   {label:"Grandparents & siblings", items:["Lorraine Lemery Lemieux","Joseph R. Lemieux","Robert L. Lemery","Jeanette Lemery","Donald H. Lemery Sr.","Gloria Taschereau Lemery","Charlotte A. Worthington Schneider","Joyce Anna Worthington","Kenny Worthington","Judy Worthington","Betty Worthington","Doris Ellen Worthington","David Worthington","Gordon R. Worthington","Linda Schneider Worthington","Frank O. Schneider","Norma Schneider Mudgett","Kenneth Schneider","Timothy Schneider","May Schneider Richards","Mrs. Clifford Richardson","Jim Engelman","Mark Engelman"]},
   {label:"Parents & siblings", items:["Rejeanne M. Lukach","Marcel T. Lemieux","John P. Lemieux","Richard J. Lemieux","Elaine L. Lemieux","Roger Lemieux","Michael Lemieux","Cheryl Lemery Bocwinski","Michelle Lemery Cleveland","Donald H. Lemery Jr.","Cindylee Lemery Begin","Mark Anthony Lemery","Penny Worthington","Roger Worthington","Bruce Worthington","Brian Worthington","Unknown Roy Biological Father","Jessica Porcello","Jameson Porcello"]},
@@ -243,6 +270,7 @@ ROWS.forEach((row,ri)=> row.items.forEach(id=> ROW_OF[id]=ri));
 const ADJACENCY_PRIORITY = [
   "Mark Anthony Lemery|Penny Worthington",
   "Jessica Porcello|Jameson Porcello",
+  "Adéiodat Lemery|Joséphine Roy",
 ];
 const sameRowUnions = UNIONS.filter(([a,b])=> ROW_OF[a]===ROW_OF[b]);
 
@@ -513,7 +541,7 @@ function relList(ids){
 function openPanel(id){
   const p = PEOPLE[id];
   if(!p) return;
-  const branchNames = {lemery:"Lemery · Taschereau · Vanasse",worthington:"Worthington · Adams",schneider:"Schneider · Cummings",camp:"Camp · Porcello",roy:"Roy",core:"Current family"};
+  const branchNames = {lemery:"Lemery · Taschereau · Vanasse · Dufresne · Roy",worthington:"Worthington · Adams",schneider:"Schneider · Cummings",camp:"Camp · Porcello",roy:"Roy",core:"Current family"};
   panelBody.innerHTML = `
     <p class="branchline">${branchNames[p.branch]||""}</p>
     <h2>${id}</h2>
