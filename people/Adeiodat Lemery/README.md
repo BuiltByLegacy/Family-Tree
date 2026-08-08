@@ -22,12 +22,17 @@ Name transcribed directly from the original 1896 Saint-Damase marriage register 
 
 The only current source is the 1896 marriage record of his son Roel, which names him and confirms he had died by that date. No independent record (birth, marriage, death, census) has yet been located for Adéiodat himself.
 
+## 1877 whereabouts — likely Rhode Island
+
+Son Roel's baptism was **searched exhaustively in the Saint-Damase 1877 register and not found** (see Roel's profile and the 1877–1878 register-search report). This suggests Adéiodat and Joséphine were **not in Saint-Damase in 1877** — Roel's reported birthplace of **Warwick, Kent County, Rhode Island** is now **Probable**, fitting the common Québec ↔ New England mill-town migration pattern. They (or their descendants) were back in Saint-Damase by 1896.
+
 ## Priority records
 
 1. Adéiodat and Joséphine Roy's own marriage record
 2. Adéiodat's death record (predates Oct 1896)
 3. Adéiodat's birth/baptism record
-4. Any baptismal records for Roel or siblings that would independently confirm this parentage
+4. **Rhode Island records ~1877** (Warwick/Kent Co. Catholic baptisms, RI civil births/censuses) placing the Lemery–Roy household there
+5. Any baptismal records for Roel or siblings that would independently confirm this parentage — scan the full 1877–1899 Saint-Damase register for *any* Lemery baptism to date the family's arrival
 
 ## Sources
 

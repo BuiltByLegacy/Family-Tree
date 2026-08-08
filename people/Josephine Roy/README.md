@@ -19,12 +19,17 @@ Unknown, aside from being alive as of October 27, 1896.
 
 The only current source is her son Roel's 1896 marriage record, which names her and implies a remarriage to Paul Lussier through his role and title as a witness at the wedding.
 
+## 1877 whereabouts — likely Rhode Island
+
+Son Roel's baptism is **absent from the Saint-Damase 1877 register** despite an exhaustive search (see Roel's profile and the register-search report). This points to the Lemery–Roy household being **outside Québec in 1877**, consistent with Roel's *Probable* birthplace of **Warwick, Kent County, Rhode Island**. Joséphine was back in Saint-Damase by 1896 (and had apparently remarried Paul Lussier by then).
+
 ## Priority records
 
 1. Joséphine Roy and Adéiodat Lemery's marriage record
 2. Joséphine Roy's possible remarriage record to Paul Lussier
 3. Joséphine's own birth/baptism record and parents
-4. Death record
+4. **Rhode Island records ~1877** (Warwick/Kent Co. Catholic baptisms, RI civil births/censuses) placing the household there
+5. Death record
 
 ## Sources
 

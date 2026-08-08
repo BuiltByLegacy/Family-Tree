@@ -7,7 +7,22 @@
 ## Vital events
 
 - Birth: **November 24, 1877** — Strongly Supported by Find a Grave memorial and photographed shared gravestone
-- Reported birthplace: **Warwick, Kent County, Rhode Island** — Possible / derivative memorial data
+- Reported birthplace: **Warwick, Kent County, Rhode Island** — **Probable** (upgraded from Possible). The Saint-Damase parish register for late 1877 has now been searched exhaustively and contains **no Lemery baptism** (see negative finding below), which is consistent with a birth outside Québec. French-Canadian families frequently moved between Québec and the Rhode Island / New England mill towns.
+
+## Baptism search — NEGATIVE at Saint-Damase (1877)
+
+Roel's baptism was **searched exhaustively in the Saint-Damase register** ("Baptêmes, mariages, sépultures 1877-1899") and **not found.** The entire November 1877 baptism sequence is accounted for with no Lemery:
+
+| Act | Date | Act | Date |
+|---|---|---|---|
+| B71 | Nov 4 | B75 | Nov 20 |
+| B72 | Nov 8 | **B76** | **Nov 25** |
+| B73 | Nov 12 | B77 | Nov 26 |
+| B74 | Nov 20 | B78 | Nov 29 |
+
+Roel's reported birth of **November 24** falls in the gap between B75 (Nov 20) and B76 (Nov 25) — there is no act for him, and no Lemery baptism appears from B71 through B78, nor into early December (B79 = Dec 6). The register is demonstrably complete and reliable for this parish (it captured Alida Dufresne's Aug 1878 baptism on the exact day), so this absence is a real negative, not a gap.
+
+**Interpretation:** Roel was very likely **not born or baptized in Saint-Damase.** The 1896 marriage's "de cette paroisse" denotes residence, not birthplace. This strengthens the Rhode Island birthplace lead. Note: this register begins in 1877, so it does not reach any earlier Lemery baptisms; a scan of the full 1877–1899 book for *any* Lemery baptism would date the family's arrival in Saint-Damase.
 - Death: **June 5, 1941** — Strongly Supported by memorial and gravestone
 - Reported death place: **Danielson, Windham County, Connecticut** — Strongly Supported by memorial; original death record still preferred
 - Burial: **Holy Cross Cemetery, Danielson, Windham County, Connecticut** — Strongly Supported
@@ -57,8 +72,9 @@ A user-supplied Find a Grave screenshot for **Roel Joseph Lemery, Memorial ID 32
 2. **Locate Joséphine Roy's remarriage to Paul Lussier**
 3. Locate Roel and Alida with their children in **1900/1910/1920 U.S. or Canadian censuses**
 4. Locate **Honora Rosa Lemery's 1903 Saint-Hyacinthe baptism/civil birth record** and test Roel + Alida as parents
-5. Locate Roel's own Rhode Island birth/baptism record (born 1877, before the family's presence in Saint-Damase — worth checking whether Adéiodat and Joséphine had emigrated to Rhode Island and returned to Québec, or whether Roel was baptized in Québec despite a Rhode Island civil birth)
-6. Locate Roel's 1941 Connecticut death record/obituary
+5. **Locate Roel's Rhode Island birth/baptism record** (born ~Nov 24, 1877; parents Adéiodat Lemery & Joséphine Roy) — now the leading hypothesis after the Saint-Damase 1877 baptism came back negative. Check Warwick / Kent County Catholic parish baptisms and RI civil birth records.
+6. **Scan the full 1877–1899 Saint-Damase register for *any* Lemery baptism** — the first one dates Adéiodat & Joséphine's arrival in the parish and would reveal Roel's younger siblings (also catches any rare delayed baptism of Roel himself).
+7. Locate Roel's 1941 Connecticut death record/obituary
 
 ## Sources
 
