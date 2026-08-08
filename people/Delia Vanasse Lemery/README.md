@@ -10,7 +10,7 @@
 - Birthplace: **Unresolved**
 - Death: **April 10, 1967** — Strongly Supported by memorial and grave marker
 - Reported death place: **Hartford, Hartford County, Connecticut** — Strongly Supported by memorial; original death record still preferred
-- Burial: **Mount Saint Benedict Cemetery, Bloomfield, Hartford County, Connecticut** — Strongly Supported
+- Burial: **Mount Saint Benedict Cemetery, Bloomfield, Hartford County, Connecticut** — Strongly Supported; same cemetery as Donald H. Lemery Sr.'s own burial, a corroborating detail for the family plot
 
 ## Relationships
 

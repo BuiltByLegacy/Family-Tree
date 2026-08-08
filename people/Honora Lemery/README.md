@@ -6,7 +6,7 @@
 
 ## Identity
 
-The strongest currently observed name is **Honora Rosa Lemery**. A photographed grave marker reads **HONORA R. LEMERY** and shows **Aug. 21, 1903 – Apr. 14, 1979**. A Find a Grave memorial reports the expanded name Honora Rosa Lemery and birthplace **Saint-Hyacinthe, Québec, Canada**.
+The strongest currently observed name is **Honora Rosa Lemery**. A photographed grave marker at Mount Saint Benedict Cemetery reads **"FATHER / HONORA R. LEMERY / AUG. 21 1903 / APR. 14 1979"** — the "FATHER" inscription on the stone itself confirms he is male, resolving what would otherwise be a gender inconsistency with the "Rosa" middle name reported by Find a Grave. A Find a Grave memorial (ID 98024000) reports the expanded name Honora Rosa Lemery and birthplace Saint-Hyacinthe, Québec, Canada.
 
 ## Vital events
 
@@ -14,7 +14,7 @@ The strongest currently observed name is **Honora Rosa Lemery**. A photographed 
 - Reported birthplace: **Saint-Hyacinthe, Montérégie, Québec, Canada** — Possible / derivative until baptism or civil birth is found
 - Death: **April 14, 1979** — Strongly Supported by memorial and headstone image
 - Reported death place: **Manchester, Hartford County, Connecticut** — Possible / derivative
-- Burial: **Mount Saint Benedict Cemetery, Bloomfield, Connecticut** — Strongly Supported
+- Burial: **Mount Saint Benedict Cemetery, Bloomfield, Connecticut** — Strongly Supported; this is the same cemetery as Donald H. Lemery Sr.'s own burial, a corroborating detail for the family plot
 
 ## Relationships
 
@@ -34,7 +34,7 @@ The sibling network is consistent across the Roel and Alida Find a Grave family 
 
 ## Evidence summary
 
-Donald's obituary independently names Honora and Delia as his parents. Honora's grave photograph strongly supports his initials and exact dates. Roel Joseph Lemery Memorial ID **32960536** and Alida DuFresne Lemery Memorial ID **32960530** each present the same spouse/child family network and place Honora among their children. This materially strengthens the working parent hypothesis, but the links still depend on user-contributed memorial relationships.
+Donald's obituary independently names Honora and Delia as his parents. **A user-photographed grave marker reading "FATHER / HONORA R. LEMERY / AUG. 21 1903 / APR. 14 1979" is now the primary evidence for his exact dates and confirms his gender/role, resolving the ambiguity created by the "Rosa" middle name on Find a Grave's own listing.** Roel Joseph Lemery Memorial ID **32960536** and Alida DuFresne Lemery Memorial ID **32960530** each present the same spouse/child family network and place Honora among their children. This materially strengthens the working parent hypothesis, but the parent-child links still depend on user-contributed memorial relationships rather than an original baptismal, civil, or parish record.
 
 ## Priority records
 
@@ -49,6 +49,7 @@ Donald's obituary independently names Honora and Delia as his parents. Honora's 
 
 - Donald H. Lemery Sr. obituary, derivative source
 - User-supplied Find a Grave screenshots for Honora Rosa Lemery, Memorial ID **98024000**
+- User-supplied photograph of Honora's grave marker ("FATHER / HONORA R. LEMERY / AUG. 21 1903 / APR. 14 1979")
 - User-supplied Find a Grave screenshot for Roel Joseph Lemery, Memorial ID **32960536**
 - User-supplied Find a Grave screenshot for Alida DuFresne Lemery, Memorial ID **32960530**
-- User-supplied photographs of Honora's grave marker and the shared Roel/Alida gravestone
+- User-supplied photograph of the shared Roel/Alida gravestone (inscribed "son épouse" / his wife)

@@ -24,7 +24,7 @@ The working paternal-grandparent couple is now **Roel Joseph Lemery (1877–1941
 
 ## Evidence summary
 
-Donald's obituary remains the strongest current source for his parents. The newer cemetery evidence materially strengthens the paternal line by establishing exact dates for Honora and Delia and a coherent Roel–Alida family network. The next decisive record is Honora's 1903 Saint-Hyacinthe baptism/civil birth record.
+Donald's obituary remains the strongest current source for his parents. **A user-photographed grave marker for Honora reads "FATHER / HONORA R. LEMERY," which confirms his gender/role and resolves an earlier gender-consistency concern raised by Find a Grave's "Rosa" middle name.** Honora and Delia are both buried at Mount Saint Benedict Cemetery, Bloomfield, CT — the same cemetery as Donald Sr. himself, a corroborating family-plot detail. The newer cemetery evidence materially strengthens the paternal line by establishing exact dates for Honora and Delia and a coherent Roel–Alida family network. The next decisive record is Honora's 1903 Saint-Hyacinthe baptism/civil birth record, which would move the Roel+Alida parentage from Strongly Supported to Confirmed.
 
 ## Research tasks
 
