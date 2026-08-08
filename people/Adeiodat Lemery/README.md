@@ -1,0 +1,34 @@
+# Adéiodat Lemery
+
+- **Status:** Deceased (confirmed deceased by October 1896)
+- **Evidence status:** Confirmed as Roel Joseph Lemery's father, via original 1896 marriage record
+- **Branch:** Lemery
+
+## Identity
+
+Name transcribed directly from the original 1896 Saint-Damase marriage register as **"Adéiodat Lemery."** This spelling should be treated as the best current reading of the handwritten original — Adéiodat is an uncommon but real French Catholic given name (from the Latin Adeodatus, "given by God"). An earlier speculative guess elsewhere in this archive's research ("Adelard Lemery") should be considered superseded by this primary-source reading.
+
+## Vital events
+
+- Death: before **October 27, 1896** (confirmed deceased by that date; exact date unknown)
+- Birth, marriage, and other details: unknown
+
+## Relationships
+
+- Spouse: **Joséphine Roy** (see her profile)
+- Son: **Roel Joseph Lemery (1877–1941)** — Confirmed, per the 1896 marriage record identifying Roel as "fils mineur de défunt Adéiodat Lemery et de Joséphine Roy"
+
+## Evidence summary
+
+The only current source is the 1896 marriage record of his son Roel, which names him and confirms he had died by that date. No independent record (birth, marriage, death, census) has yet been located for Adéiodat himself.
+
+## Priority records
+
+1. Adéiodat and Joséphine Roy's own marriage record
+2. Adéiodat's death record (predates Oct 1896)
+3. Adéiodat's birth/baptism record
+4. Any baptismal records for Roel or siblings that would independently confirm this parentage
+
+## Sources
+
+- Original marriage register: Saint-Damase parish, Saint-Hyacinthe, Québec — "Baptêmes, mariages, sépultures 1877-1899," entry M16, dated October 27, 1896. Digitized by FamilySearch, "Canada, Québec, Catholic Parish Registers, 1621-1979."
